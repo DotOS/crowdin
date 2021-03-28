@@ -8,6 +8,7 @@
 # Copyright (C) 2014-2016 The CyanogenMod Project
 # Copyright (C) 2017-2020 The LineageOS Project
 # Copyright (C) 2020 The PixelExperience Project
+# Copyright (C) 2021 The DotOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -279,7 +280,7 @@ def push_as_commit(config_files, base_path, path, name, branch, username):
 
     # Push commit
     try:
-        repo.git.push(f'ssh://{username}@gerrit.pixelexperience.org:29418/{name}',
+        repo.git.push(f'ssh://{username}@review.droidontime.com:29418/{name}',
                       f'HEAD:refs/for/{branch}%topic=translation')
         print('Success')
     except Exception as e:
@@ -297,7 +298,7 @@ def submit_gerrit(branch, username, owner):
 
     # Find all open translation changes
     cmd = ['ssh', '-p', '29418',
-        f'{username}@gerrit.pixelexperience.org',
+        f'{username}@review.droidontime.com',
         'gerrit', 'query',
         'status:open',
         f'branch:{branch}',
@@ -320,7 +321,7 @@ def submit_gerrit(branch, username, owner):
             continue
         # Add Code-Review +2 and Verified+1 labels and submit
         cmd = ['ssh', '-p', '29418',
-        f'{username}@gerrit.pixelexperience.org',
+        f'{username}@review.droidontime.com',
         'gerrit', 'review',
         '--verified +1',
         '--code-review +2',
@@ -570,7 +571,7 @@ def main():
         print(f'{base_path_env} is not a real directory: {base_path}')
         sys.exit(1)
 
-    xml_main = load_xml(x=f'{base_path}/manifest/snippets/pixel.xml')
+    xml_main = load_xml(x=f'{base_path}/manifest/snippets/dot.xml')
     if xml_main is None:
         sys.exit(1)
 
