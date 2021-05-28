@@ -240,10 +240,34 @@ files:
         # Zulu
         zu: zu
 
+  # frameworks/base/core/res/res/values
+  -
+    source:      '/frameworks/base/core/res/res/values/dot_strings.xml'
+    translation: '/frameworks/base/core/res/res/values-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # frameworks/base/packages/PackageInstaller/res/values
+  -
+    source:      '/frameworks/base/packages/PackageInstaller/res/values/dot_strings.xml'
+    translation: '/frameworks/base/packages/PackageInstaller/res/values-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # frameworks/base/packages/SettingsLib
+  -
+    source:      '/frameworks/base/packages/SettingsLib/res/values/dot_strings.xml'
+    translation: '/frameworks/base/packages/SettingsLib/res/values-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # packages/apps/Settings
   -
     source:      '/packages/apps/Settings/res/values/dot_strings.xml'
     translation: '/packages/apps/Settings/res/values-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # packages/apps/Launcher3
+  -
+    source:      '/packages/apps/Launcher3/res/values/dot_strings.xml'
+    translation: '/packages/apps/Launcher3/res/values-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # packages/apps/SystemUpdates
@@ -258,9 +282,15 @@ files:
     translation: '/packages/apps/Customizations/app/src/main/res/values-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-      # packages/resources/Customizations - dot_customizations_strings.xml
+  # packages/resources/Customizations - dot_customizations_strings.xml
   -
     source:      '/packages/apps/Customizations/app/src/main/res/values/dot_customizations_strings.xml'
+    translation: '/packages/apps/Customizations/app/src/main/res/values-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  
+  # packages/resources/Customizations - strings_maintainers.xml
+  -
+    source:      '/packages/apps/Customizations/app/src/main/res/values/strings_maintainers.xml'
     translation: '/packages/apps/Customizations/app/src/main/res/values-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
