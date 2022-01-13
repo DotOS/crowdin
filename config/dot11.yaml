@@ -276,19 +276,25 @@ files:
     translation: '/packages/apps/SystemUpdates/res/values-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # packages/resources/Customizations - strings.xml
+  # packages/apps/BatteryManager - strings.xml
+  -
+    source:      '/packages/apps/BatteryManager/app/src/main/res/values/strings.xml'
+    translation: '/packages/apps/BatteryManager/app/src/main/res/values-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # packages/apps/Customizations - strings.xml
   -
     source:      '/packages/apps/Customizations/app/src/main/res/values/strings.xml'
     translation: '/packages/apps/Customizations/app/src/main/res/values-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # packages/resources/Customizations - dot_customizations_strings.xml
+  # packages/apps/Customizations - dot_customizations_strings.xml
   -
     source:      '/packages/apps/Customizations/app/src/main/res/values/dot_customizations_strings.xml'
     translation: '/packages/apps/Customizations/app/src/main/res/values-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   
-  # packages/resources/Customizations - strings_maintainers.xml
+  # packages/apps/Customizations - strings_maintainers.xml
   -
     source:      '/packages/apps/Customizations/app/src/main/res/values/strings_maintainers.xml'
     translation: '/packages/apps/Customizations/app/src/main/res/values-%android_code%/%original_file_name%'
